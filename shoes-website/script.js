@@ -164,6 +164,7 @@ function filterProducts(category, btn) {
   renderProducts(currentFilter, currentSort);
 }
 
+
 function sortProducts() {
   currentSort = document.getElementById("sortSelect").value;
   renderProducts(currentFilter, currentSort);
