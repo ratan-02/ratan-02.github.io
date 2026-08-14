@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#faf9f6] text-zinc-900 dark:bg-[#07080e] dark:text-zinc-100 antialiased selection:bg-orange-600 selection:text-white dark:selection:bg-orange-500 overflow-x-hidden transition-colors duration-500;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-[#f3f2ed] dark:bg-[#0c0d18];
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 dark:bg-zinc-800 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-orange-600 dark:bg-orange-500;
+}
+
+/* Floating animation keyframes for shoe image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glowing text classes */
+.neon-glow {
+  text-shadow: 0 0 10px rgba(251, 91, 54, 0.3), 0 0 20px rgba(251, 91, 54, 0.15);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(251, 91, 54, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* GPU Hardware Promotion Classes */
+.will-change-transform-opacity {
+  will-change: transform, opacity;
+}
